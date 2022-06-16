@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi met and feet</title>
+</head>
+<body>
+<label><input placeholder="mét" oninput="meterToFoot(this.value)" onchange="meterToFoot()" id="met">Nếu muốn chuyển mét sang feet</label><br><br>
+<label><input placeholder="foot" oninput="footToMeter(this.value)" onchange="footToMeter()" id="foot">Nếu muốn chuyển feet sang mét</label><br><br>
+<p id="result"></p>
+</body>
+<script>
+    // let foottomet = +document.getElementById("met").value;
+    // let chuyen = footToMeter(foottomet);
+    // document.write(foottomet +" foot " + " = " + chuyen + " meter ");
+    function meterToFoot(meter){
+       let foot = meter * 3.279;
+       document.getElementById("result").innerHTML  = meter +" meter " + " = " + foot + " foot ";
+    }
+    function footToMeter(foot){
+       let meter = foot * 0.305;
+        document.getElementById("result").innerHTML  =(foot +" foot " + " = " + meter + " meter ");
+    }
+
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm 01</title>
+</head>
+<body>
+<!--<button onclick="doSth"></button>-->
+<script>
+    // bài 1
+    // function alertMessage(){
+    //     alert("HelloWorld")
+    // }
+    // alertMessage()
+
+    //     // bài 2
+    // function goiHam(number){
+    //    number = +prompt("Nhập số vào đây")
+    //     number1 = number+1;
+    //     return number1;
+    // }
+    // goiHam();
+    //     alert(number1);
+
+    // // bài 3
+    // let so1 = +prompt("Nhập vào số đầu")
+    // let so2 = +prompt("Nhập vào số thứ hai")
+    //
+    // function bai3(a, b) {
+    //     if (a <= b) {
+    //         sum = a + b;
+    //         return sum;
+    //     } else {
+    //         alert("Số đầu nhỏ hơn số thứ hai")
+    //     }
+    // }
+    //
+    // bai3(so1, so2);
+    // alert(sum)
+
+    // // bài 4
+    // function addNumbers() {
+    //     firstNum = 4;
+    //     secondNum = 8;
+    //     result = firstNum + secondNum;
+    //     alert(result)
+    //     return result;
+    // }
+    // result = 0;
+    // alert(result)
+    // result = addNumbers();
+
+    // bài 5
+    let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let nameStar = ["Ursa Minor", 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let nameFind = prompt("Nhập tên sao mà bạn muốn tìm");
+    let index = -1;
+    function checkStar() {
+        for (let i = 0; i < stars.length; i++) {
+            if (nameFind === stars[i]) {
+                index = i;
+                break
+            }
+        }
+        if (index == -1) {
+            alert("không có ngôi sao mà bạn tìm")
+        } else {
+            document.write("Ngôi sao mà bạn cần tìm có tên khác là: " + nameStar[index])
+        }
+    }
+    checkStar(nameFind);
+
+
+
+</script>
+</body>
+</html>
