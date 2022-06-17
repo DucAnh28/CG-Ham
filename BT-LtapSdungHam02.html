@@ -17,7 +17,124 @@
     // let yo = sqrt(number);
     // document.write("Căn bậc 2 của " + number + " là " + yo);
 
-    // bài 2
+    // // bài 2
+    // function TinhS(r) {
+    //     S = r * r * 3.14;
+    //     return S;
+    // }
+    // function TinhC(r){
+    //     C = 2*r*3.14;
+    //     return C;
+    // }
+    // let r = +prompt("nhập bán kính vào đây");
+    // document.write(TinhC(r));
+    // document.write(TinhS(r));
 
+    // bài 3
+    // Cách 1: dùng đệ quy
+    // function giaiThua(number){
+    //     if (number === 2){
+    //         return 2;
+    //     }
+    //     return (number * giaiThua(number - 1))
+    // }
+    //
+    // console.log(giaiThua(5))
+    // Cách 2: Dùng vòng lặp
+    // function giaiThua(n) {
+    //     let gT = 1;
+    //     for (let i = 1; i <= n; i++) {
+    //         gT *= i;
+    //     }
+    //     return gT;
+    // }
+    // console.log(giaiThua(5));
+
+    // // bài 4
+    // function checkNum(n){
+    //     if (isNaN(n)){
+    //         return false;
+    //     }
+    //     else {
+    //         return true;
+    //     }
+    // }
+    // let num = prompt("Nhập vào đây")
+    // console.log(checkNum(num))
+
+    // // bài 5
+    // function maxMin(a,b,c){
+    //     let min = a;
+    //     if (min>b){
+    //         min = b;
+    //     }
+    //     else if (min>c){
+    //         min = c;
+    //     }
+    //     return min;
+    // }
+    // let a = +prompt("Nhập số đầu")
+    // let b = +prompt("Nhập số thứ hai")
+    // let c = +prompt("Nhập số thứ ba")
+    // console.log(maxMin(a,b,c))
+
+    // // bài 6
+    // function ktraSoDuong(a){
+    //     if (a>0){
+    //         return true;
+    //     }
+    //     else {
+    //         return false;
+    //     }
+    // }
+    // let a = +prompt("Nhập số vào đây")
+    // console.log(ktraSoDuong(a));
+
+    // // bài 7
+    // let arr = [];
+    // let a = prompt("Nhập số đầu")
+    // arr[0] = a
+    // let b = prompt("Nhập số sau")
+    // arr[1] = b
+    // function doiCho(){
+    //     let tempt = arr[0]
+    //     arr[0] = arr[1];
+    //     arr[1] = tempt;
+    //     return arr;
+    // }
+    // console.log(doiCho(arr))
+
+    // // bài 8
+    // let arr = new Array(10);
+    // for (let i = 0; i < 10; i++) {
+    //     arr[i] = +prompt("Nhập số vào đây")
+    // }
+    // let n = arr.length
+    // function doiCho(){
+    //     for (let i = 0; i < (arr.length/2); i++) {
+    //         let temp = arr[i]
+    //         arr[i] = arr[n-i-1];
+    //         arr[n-i-1] = temp;
+    //     }
+    // }
+    // doiCho(arr);
+    // console.log(arr)
+
+    // bài 9
+    let arr = new Array(6);
+    for (let i = 0; i < 6; i++) {
+        arr[i] = prompt("Nhập vào đây lần "+i)
+    }
+    function checkIn(number){
+        let count = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (number == arr[i]){
+                count++
+            }
+        }
+        return count;
+    }
+    let num = +prompt("Kiểm tra phần tử có trong mảng");
+    document.write("Số lần xuất hiện của ký tự " + num + " là " +checkIn(num)+ " lần ");
 </script>
 </html>
